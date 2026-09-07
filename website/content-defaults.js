@@ -22,7 +22,7 @@ window.FNB_DEFAULT_CONTENT = {
     "hero": {
       "eyebrow": "Tanzania · Diaspora Investment Advisory",
       "title": "FnB institutionalises trust for diaspora investment.",
-      "body": "Forward in Business closes the trust gap between the East African diaspora and their home-based contacts - through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.",
+      "body": "Forward in Business closes the trust gap between the East African diaspora and their home-based contacts through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.",
       "primaryCta": {
         "label": "Get the Diaspora Investment Report",
         "href": "research.html#report"
@@ -71,7 +71,7 @@ window.FNB_DEFAULT_CONTENT = {
     "trustIntro": {
       "eyebrow": "A service-led trust system",
       "title": "Not a replacement for family. A professional layer around it.",
-      "body": "FnB combines independent research, hands-on concierge execution, and a secure digital portal - so you gain a professionally accountable partner on the ground, without giving up the relationships you already trust.",
+      "body": "FnB combines independent research, hands-on concierge execution, and a secure digital portal so you gain a professionally accountable partner on the ground, without giving up the relationships you already trust.",
       "linkLabel": "See the full client journey →",
       "linkHref": "roadmap.html"
     },
@@ -80,14 +80,14 @@ window.FNB_DEFAULT_CONTENT = {
         "num": "I",
         "label": "Research",
         "title": "Investment Research & Screening",
-        "body": "Market and sector research, opportunity screening, and investor education - without regulated securities recommendations.",
+        "body": "Market and sector research, opportunity screening, and investor education without regulated securities recommendations.",
         "photo": "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         "num": "II",
         "label": "Concierge",
         "title": "Due Diligence & Project Assurance",
-        "body": "We never pool client money - we coordinate verification and execute the project on your behalf: title checks, procurement oversight, construction supervision.",
+        "body": "We never pool client money, we coordinate verification and execute the project on your behalf: title checks, procurement oversight, construction supervision.",
         "photo": "https://images.unsplash.com/photo-1681505531034-8d67054e07f6?q=80&w=800&auto=format&fit=crop"
       }
     ],
@@ -120,7 +120,7 @@ window.FNB_DEFAULT_CONTENT = {
     "final": {
       "eyebrow": "Why FnB exists",
       "title": "A family in London, finally completing a house in Tanzania - without losing money.",
-      "body": "That’s the outcome FnB is built around. Everything else - the research, the reports, the portal - exists to make that ordinary.",
+      "body": "That’s the outcome FnB is built around. Everything else the research, the reports, the portal exists to make that ordinary.",
       "photo": "https://images.unsplash.com/photo-1761401395640-5c45422f2a99?q=80&w=2000&auto=format&fit=crop",
       "cta": {
         "label": "Join the first cohort",
@@ -148,7 +148,7 @@ window.FNB_DEFAULT_CONTENT = {
         "num": 2,
         "label": "Define",
         "title": "KYC, scope & conflict screening",
-        "body": "We run risk-based source-of-funds checks and scope the engagement. You set the objectives, budget, and risk boundary.",
+        "body": "We run risk-based source of funds checks and scope the engagement. You set the objectives, budget, and risk boundary.",
         "tag": "You decide: objectives & budget",
         "photo": "https://images.unsplash.com/photo-1681505504714-4ded1bc247e7?q=80&w=800&auto=format&fit=crop"
       },
@@ -156,7 +156,7 @@ window.FNB_DEFAULT_CONTENT = {
         "num": 3,
         "label": "Verify",
         "title": "Independent verification",
-        "body": "We coordinate evidence from independent, appropriately qualified specialists - identity, title, technical, and supplier checks. You accept the scope and material risks.",
+        "body": "We coordinate evidence from independent, appropriately qualified specialists identity, title, technical, and supplier checks. You accept the scope and material risks.",
         "tag": "You decide: acceptance of risk",
         "photo": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
       },
@@ -313,7 +313,7 @@ window.FNB_DEFAULT_CONTENT = {
     "final": {
       "eyebrow": "Start with a conversation",
       "title": "Tell us what you’re trying to do back home.",
-      "body": "Whether it’s due diligence on a plot or a full build supervised end to end - start with a consultation.",
+      "body": "Whether it’s due diligence on a plot or a full build supervised end to end start with a consultation.",
       "photo": "https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?q=80&w=2000&auto=format&fit=crop",
       "cta": {
         "label": "Meet the founder",
@@ -327,7 +327,7 @@ window.FNB_DEFAULT_CONTENT = {
       "title": "Built from lived experience, not a market gap on paper.",
       "photo": "https://images.unsplash.com/photo-1589177900326-900782f88a55?q=80&w=800&auto=format&fit=crop",
       "paragraphs": [
-        "Forward in Business was conceived in 2023 and formally established in mid-2026 by a team with direct, lived experience of the problem it now solves. Our founding Managing Director spent more than fifteen years living abroad and, over that period, witnessed a recurring pattern among fellow diaspora members: mismanaged construction projects, unexplained loss of funds sent home for investment, and - most damaging of all - family relationships strained by informal financial arrangements never built to withstand distance, time, or disagreement.",
+        "Forward in Business was conceived in 2023 and formally established in mid-2026 by a team with direct, lived experience of the problem it now solves. Our founding Managing Director spent more than fifteen years living abroad and, over that period, witnessed a recurring pattern among fellow diaspora members: mismanaged construction projects, unexplained loss of funds sent home for investment, and most damaging of all, family relationships strained by informal financial arrangements never built to withstand distance, time, or disagreement.",
         "That experience is FnB’s core insight: the problem diaspora investors face is rarely a shortage of capital or opportunity. It’s a shortage of trustworthy, professionally accountable intermediaries who can stand between the investor and the market, verify what’s real, and report back honestly and consistently."
       ]
     },
@@ -417,22 +417,9 @@ window.FNB_DEFAULT_CONTENT = {
         "name": "Safi Kasongo",
         "role": "Co-founder / Director, Systems Engineering",
         "bg": "BSc, Data Science",
-        "uni": "The Eastern Africa Statistical Training Centre, Tanzania"
+        "university": "The Eastern Africa Statistical Training Centre, Tanzania"
       },
-      {
-        "initials": "EL",
-        "name": "Emmanuel Leonard",
-        "role": "Co-founder / IT Director",
-        "bg": "Diploma in IT; six years’ IT experience",
-        "uni": "University of Dar es Salaam Computing Centre, Tanzania"
-      },
-      {
-        "initials": "OK",
-        "name": "Oredi Kamili",
-        "role": "Co-founder / Client Relations",
-        "bg": "Client relationship management",
-        "uni": "-"
-      }
+
     ],
     "quote": {
       "text": "To become the most trusted, technology-enabled diaspora investment ecosystem connecting global African investors with sustainable opportunities across East Africa - and to get there through transparent governance, not just growth.",
@@ -443,7 +430,7 @@ window.FNB_DEFAULT_CONTENT = {
     "governanceIntro": {
       "eyebrow": "Governance philosophy",
       "title": "Seven pillars that answer the trust deficit directly",
-      "body": "FnB is registered as a private limited liability company in Tanzania, through BRELA, and operates strictly as a fee-based advisory and project-management service - it does not pool, hold, or invest client funds on a discretionary basis at this stage."
+      "body": "FnB is registered as a private limited liability company in Tanzania, through BRELA, and operates strictly as a fee-based advisory and project management service, it does not pool, hold, or invest client funds on a discretionary basis at this stage."
     },
     "governance": [
       {
@@ -452,7 +439,7 @@ window.FNB_DEFAULT_CONTENT = {
       },
       {
         "title": "Technology-driven operations",
-        "body": "The secure evidence portal isn’t a feature - it’s how oversight actually happens."
+        "body": "The secure evidence portal isn’t a feature, it’s how oversight actually happens."
       },
       {
         "title": "Trust & transparency by design",
@@ -478,7 +465,7 @@ window.FNB_DEFAULT_CONTENT = {
     "final": {
       "eyebrow": "Get in touch",
       "title": "Have land, a build, or a question about investing back home?",
-      "body": "Start with a conversation - no commitment, no custody of your funds, just a first look at what you’re trying to do.",
+      "body": "Start with a conversation, no commitment, no custody of your funds, just a first look at what you’re trying to do.",
       "photo": "https://images.unsplash.com/photo-1568216681201-1edacc6c8048?q=80&w=2000&auto=format&fit=crop",
       "cta": {
         "label": "Call +255 742 460 508",
