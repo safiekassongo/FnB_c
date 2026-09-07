@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publisher sign-in - FnB</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="admin-styles.css">
+</head>
+<body class="admin-body">
+
+<div class="login-screen">
+  <div class="login-card">
+    <a class="brand" href="../index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" width="30" height="30">
+        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
+        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 22V17H19V22" stroke="#DD7A1F" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <div class="brand-text">FnB</div>
+        <div class="brand-sub">Publisher Dashboard</div>
+      </div>
+    </a>
+    <h1>Sign in</h1>
+    <p class="hint">Enter your publisher access token to manage news, research, page content, and contact inquiries.</p>
+
+    <form id="loginForm">
+      <div class="login-field">
+        <label for="loginToken">Access token</label>
+        <input id="loginToken" type="password" placeholder="Enter your token" autocomplete="off" autofocus>
+      </div>
+      <button type="submit" class="login-submit">Sign in</button>
+      <div id="loginStatus" class="login-status"></div>
+    </form>
+
+    <a class="login-back" href="../index.html">&larr; Back to the website</a>
+  </div>
+</div>
+
+<script src="../site-config.js"></script>
+<script>
+(function () {
+  var TOKEN_KEY = 'fnb_publisher_token';
+  var form = document.getElementById('loginForm');
+  var statusEl = document.getElementById('loginStatus');
+  var tokenInput = document.getElementById('loginToken');
+  var cfg = window.FNB_CONFIG || { BASE_URL: '' };
+
+  // Already signed in with a token that works? Skip straight to the dashboard.
+  var existing = sessionStorage.getItem(TOKEN_KEY);
+  if (existing) {
+    verify(existing).then(function (ok) {
+      if (ok) window.location.href = 'index.html';
+    });
+  }
+
+  function authHeaders(token) {
+    var headers = {};
+    if (cfg.AUTH && cfg.AUTH.type === 'header') headers[cfg.AUTH.headerName || 'x-api-key'] = token;
+    else headers['Authorization'] = 'Bearer ' + token;
+    return headers;
+  }
+
+  function verify(token) {
+    if (!cfg.BASE_URL) return Promise.resolve(false);
+    return fetch(cfg.BASE_URL + (cfg.AUTH_VERIFY || '/auth/verify'), { headers: authHeaders(token) })
+      .then(function (res) { return res.ok; })
+      .catch(function () { return false; });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var token = tokenInput.value.trim();
+    var submitBtn = form.querySelector('.login-submit');
+
+    if (!token) {
+      statusEl.textContent = 'Enter your access token.';
+      statusEl.className = 'login-status err';
+      return;
+    }
+    if (!cfg.BASE_URL) {
+      statusEl.textContent = 'No API configured yet - set BASE_URL in site-config.js before signing in.';
+      statusEl.className = 'login-status err';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Checking\u2026';
+    statusEl.textContent = '';
+
+    verify(token).then(function (ok) {
+      if (ok) {
+        sessionStorage.setItem(TOKEN_KEY, token);
+        statusEl.textContent = 'Signed in - redirecting\u2026';
+        statusEl.className = 'login-status ok';
+        window.location.href = 'index.html';
+      } else {
+        statusEl.textContent = 'That token was not accepted. Check it and try again.';
+        statusEl.className = 'login-status err';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Sign in';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

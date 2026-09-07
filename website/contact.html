@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - FnB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="brand-bar"></div>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
+        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 22V17H19V22" stroke="#DD7A1F" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <div class="brand-text">FnB</div>
+        <div class="brand-sub">Diaspora Investment Advisory</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="roadmap.html">How it works</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="research.html#report">Get the report</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Reach us</span>
+    <h1>Tell us what you're trying to do back home.</h1>
+    <p>Land you're verifying, a build you want supervised, or just a question about how this works, start with a message. No commitment, no custody of your funds.</p>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="wrap">
+    <div class="contact-layout">
+      <div class="contact-form reveal">
+        <h3>Send a message</h3>
+        <p class="hint">We typically reply within one to two business days.</p>
+        <form id="contactForm">
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label for="cfName">Name</label>
+              <input id="cfName" name="name" type="text" placeholder="Your full name" required maxlength="120">
+            </div>
+            <div class="contact-field">
+              <label for="cfEmail">Email</label>
+              <input id="cfEmail" name="email" type="email" placeholder="you@email.com" required maxlength="200">
+            </div>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label for="cfPhone">Phone (optional)</label>
+              <input id="cfPhone" name="phone" type="tel" placeholder="+44 7700 900000" maxlength="40">
+            </div>
+            <div class="contact-field">
+              <label for="cfTopic">What's this about</label>
+              <select id="cfTopic" name="topic">
+                <option value="General enquiry">General enquiry</option>
+                <option value="Land or title verification">Land or title verification</option>
+                <option value="Construction supervision">Construction supervision</option>
+                <option value="Property management">Property management</option>
+                <option value="Investment research">Investment research</option>
+                <option value="Partnership / press">Partnership / press</option>
+              </select>
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="cfMessage">Message</label>
+            <textarea id="cfMessage" name="message" placeholder="Tell us a bit about what you're trying to do…" required maxlength="3000"></textarea>
+          </div>
+          <!-- Honeypot: hidden from real visitors, catches simple bots -->
+          <div class="contact-honeypot" aria-hidden="true">
+            <label for="cfCompany">Company</label>
+            <input id="cfCompany" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" class="contact-submit">Send message</button>
+          <div id="contactStatus" class="contact-status"></div>
+        </form>
+      </div>
+
+      <div class="contact-side reveal">
+        <h3>Direct contact</h3>
+        <p>Prefer to talk first? Reach the founder directly.</p>
+        <div class="contact-detail">
+          <div class="label">Phone</div>
+          <div class="value" data-global="phone">+255 742 460 508</div>
+        </div>
+        <div class="contact-detail">
+          <div class="label">Location</div>
+          <div class="value" data-global="location">Dar es Salaam, Tanzania</div>
+        </div>
+        <div class="contact-detail">
+          <div class="label">Coverage</div>
+          <div class="value">Tanzania · DRC · Burundi . Uganda . Kenya</div>
+        </div>
+
+        <p class="contact-publisher-note">
+          Publisher? <a class="contact-publisher-link" href="admin/login.html">Sign in to the publisher dashboard →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" width="22" height="22">
+        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
+        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>FnB - Forward in Business</span>
+    </a>
+    <div class="cols">
+      <div>
+        <h4>Institute</h4>
+        <ul>
+          <li><a href="roadmap.html">How it works</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li data-global="phone">+255 742 460 508</li>
+          <li data-global="location">Dar es Salaam, Tanzania</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="site-config.js"></script>
+<script src="content-defaults.js"></script>
+<script src="script.js"></script>
+<script src="content-render.js"></script>
+</body>
+</html>

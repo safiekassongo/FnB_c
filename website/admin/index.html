@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publisher Dashboard - FnB</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="admin-styles.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <a class="brand" href="../index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" width="26" height="26">
+        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
+        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 22V17H19V22" stroke="#DD7A1F" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <div class="brand-text">FnB</div>
+        <div class="brand-sub">Publisher Dashboard</div>
+      </div>
+    </a>
+
+    <button class="admin-mobile-toggle" id="mobileNavToggle">Menu \u2630</button>
+
+    <ul class="admin-nav" id="adminNav">
+      <li><button data-panel="news" class="active">News <span class="count" id="countNews">-</span></button></li>
+      <li><button data-panel="research">Research <span class="count" id="countResearch">-</span></button></li>
+      <li><button data-panel="pages">Page content</button></li>
+      <li><button data-panel="inbox">Inbox <span class="count" id="countInbox">-</span></button></li>
+    </ul>
+
+    <div class="admin-sidebar-foot">
+      <div class="who" id="whoami">Signed in</div>
+      <button class="admin-logout" id="logoutBtn">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <!-- ===================== NEWS ===================== -->
+    <section class="admin-panel active" id="panel-news">
+      <div class="admin-panel-head">
+        <div>
+          <h1>News</h1>
+          <p>Firm announcements, project milestones, and press - shown on the public News page.</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Publish an update</h3>
+        <form id="newsForm">
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="nfTitle">Title</label>
+              <input id="nfTitle" name="title" type="text" placeholder="e.g. FnB opens client intake in Dar es Salaam" required maxlength="120">
+            </div>
+            <div class="admin-field">
+              <label for="nfCategory">Category</label>
+              <select id="nfCategory" name="category">
+                <option value="Announcement">Announcement</option>
+                <option value="Research">Research</option>
+                <option value="Project Update">Project Update</option>
+                <option value="Governance">Governance</option>
+                <option value="Press">Press</option>
+              </select>
+            </div>
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="nfDate">Date</label>
+              <input id="nfDate" name="date" type="date">
+            </div>
+            <div class="admin-field">
+              <label for="nfImage">Image URL (optional)</label>
+              <input id="nfImage" name="image" type="url" placeholder="https://\u2026">
+            </div>
+          </div>
+          <div class="admin-field">
+            <label for="nfBody">Summary</label>
+            <textarea id="nfBody" name="body" placeholder="A short summary of the update\u2026" required maxlength="600"></textarea>
+          </div>
+          <button type="submit" class="admin-btn">Publish update</button>
+          <div id="newsFormStatus" class="admin-status"></div>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <h3>Published (<span id="newsListCount">0</span>)</h3>
+        <div id="newsAdminList"><div class="admin-loading">Loading\u2026</div></div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="admin-panel" id="panel-research">
+      <div class="admin-panel-head">
+        <div>
+          <h1>Research</h1>
+          <p>Published findings and reports - shown on the public Research page.</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Publish a finding</h3>
+        <form id="researchForm">
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="rfTitle">Title</label>
+              <input id="rfTitle" name="title" type="text" placeholder="e.g. Dar es Salaam Rental Yield Snapshot, Q1" required maxlength="140">
+            </div>
+            <div class="admin-field">
+              <label for="rfRef">Reference code</label>
+              <input id="rfRef" name="ref" type="text" placeholder="e.g. REF. TZ / Q1-2027" maxlength="40">
+            </div>
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="rfStatus">Status</label>
+              <select id="rfStatus" name="status">
+                <option value="Published">Published</option>
+                <option value="Flagship - annual">Flagship - annual</option>
+                <option value="Available now">Available now</option>
+                <option value="Updated">Updated</option>
+              </select>
+            </div>
+            <div class="admin-field">
+              <label for="rfDate">Date</label>
+              <input id="rfDate" name="date" type="date">
+            </div>
+          </div>
+          <div class="admin-field">
+            <label for="rfBody">Summary</label>
+            <textarea id="rfBody" name="body" placeholder="What the finding covers and who it's for\u2026" required maxlength="600"></textarea>
+          </div>
+          <button type="submit" class="admin-btn">Publish report</button>
+          <div id="researchFormStatus" class="admin-status"></div>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <h3>Published (<span id="researchListCount">0</span>)</h3>
+        <div id="researchAdminList"><div class="admin-loading">Loading\u2026</div></div>
+      </div>
+    </section>
+
+    <!-- ===================== PAGE CONTENT ===================== -->
+    <section class="admin-panel" id="panel-pages">
+      <div class="admin-panel-head">
+        <div>
+          <h1>Page content</h1>
+          <p>Edit the JSON that powers Home, Roadmap, Services, and About. Changes go live immediately on save.</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Choose a page</h3>
+        <div class="admin-field">
+          <select id="pageSelect">
+            <option value="home">Home</option>
+            <option value="roadmap">Roadmap</option>
+            <option value="services">Services</option>
+            <option value="about">About</option>
+            <option value="global">Global (footer contact info)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3 id="pageEditorTitle">Edit - Home</h3>
+        <div id="pageEditorWrap">
+          <div class="admin-loading">Loading\u2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INBOX ===================== -->
+    <section class="admin-panel" id="panel-inbox">
+      <div class="admin-panel-head">
+        <div>
+          <h1>Inbox</h1>
+          <p>Messages submitted through the public Contact form.</p>
+        </div>
+        <button class="admin-btn ghost" id="inboxRefreshBtn">Refresh</button>
+      </div>
+
+      <div class="admin-card">
+        <div id="inboxAdminList"><div class="admin-loading">Loading\u2026</div></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="../site-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
