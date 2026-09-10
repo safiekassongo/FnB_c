@@ -21,7 +21,7 @@ window.FNB_DEFAULT_CONTENT = {
   "home": {
     "hero": {
       "eyebrow": "Tanzania · Diaspora Investment Advisory",
-      "title": "FnB institutionalises trust for diaspora investment.",
+      "title": "Invest with Confidence. Stay Connected. See What Is Happening on the Ground.",
       "body": "Forward in Business closes the trust gap between the East African diaspora and their home-based contacts through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.",
       "primaryCta": {
         "label": "Get the Diaspora Investment Report",
