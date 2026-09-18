@@ -1,0 +1,9 @@
+[build]
+  publish = "website"
+
+# Keep static page navigation working when deployed on Netlify.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

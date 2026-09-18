@@ -3,11 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - FnB</title>
+<title>Our Team & Governance - FnB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Custom adjustments for wider team cards and full image display */
+  .dossiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+  }
+  .dossier {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface, #ffffff);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line, #e2e8f0);
+    box-shadow: 0 4px 12px rgba(14, 42, 71, 0.04);
+  }
+  .dossier-photo {
+    width: 100%;
+    height: 320px;
+    background-color: #f1f5f9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dossier-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .dossier-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .dossier-body p {
+    margin-bottom: 12px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+</style>
 </head>
 <body>
 <div class="brand-bar"></div>
@@ -49,101 +93,118 @@
 
         <!-- About Dropdown Menu -->
         <li class="dropdown">
-          <a href="#" class="drop-btn">About ▾</a>
+          <a href="#" class="drop-btn active">About ▾</a>
           <ul class="dropdown-content">
             <li><a href="about.html">Our Origin</a></li>
             <li><a href="who-are-we.html">Who We Are</a></li>
             <li><a href="team.html">Our Team & Governance</a></li>
-            <li><a href="where-we-operate.html">Where We Operate</a></li>
             <li><a href="markets.html">Markets</a></li>
+            <li><a href="where-we-operate.html">Where We Operate</a></li>
           </ul>
         </li>
 
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <a class="nav-cta" href="contact.html">Get in touch</a>
     </div>
   </nav>
 </header>
 
+<!-- Page Hero Section -->
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span>Reach us</span>
-    <h1>Tell us what you're trying to do back home.</h1>
-    <p>Land you're verifying, a build you want supervised, or just a question about how this works, start with a message. No commitment, no custody of your funds.</p>
+    <span class="eyebrow"><span class="dot"></span>Leadership & Oversight</span>
+    <h1>Our Team &amp; Governance</h1>
+    <p>Meet the experienced leaders, researchers, and strategists guiding our mission to bring institutional transparency to cross-border investment.</p>
   </div>
 </section>
 
-<section class="news-section">
+<!-- Team & Governance Content Section -->
+<section class="research" style="padding-top: 0;">
   <div class="wrap">
-    <div class="contact-layout">
-      <div class="contact-form reveal">
-        <h3>Send a message</h3>
-        <p class="hint">We typically reply within one to two business days.</p>
-        <form id="contactForm">
-          <div class="contact-grid">
-            <div class="contact-field">
-              <label for="cfName">Name</label>
-              <input id="cfName" name="name" type="text" placeholder="Your full name" required maxlength="120">
-            </div>
-            <div class="contact-field">
-              <label for="cfEmail">Email</label>
-              <input id="cfEmail" name="email" type="email" placeholder="you@email.com" required maxlength="200">
-            </div>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-field">
-              <label for="cfPhone">Phone (optional)</label>
-              <input id="cfPhone" name="phone" type="tel" placeholder="+44 7700 900000" maxlength="40">
-            </div>
-            <div class="contact-field">
-              <label for="cfTopic">What's this about</label>
-              <select id="cfTopic" name="topic">
-                <option value="General enquiry">General enquiry</option>
-                <option value="Land or title verification">Land or title verification</option>
-                <option value="Construction supervision">Construction supervision</option>
-                <option value="Property management">Property management</option>
-                <option value="Investment research">Investment research</option>
-                <option value="Partnership / press">Partnership / press</option>
-              </select>
-            </div>
-          </div>
-          <div class="contact-field">
-            <label for="cfMessage">Message</label>
-            <textarea id="cfMessage" name="message" placeholder="Tell us a bit about what you're trying to do…" required maxlength="3000"></textarea>
-          </div>
-          <!-- Honeypot: hidden from real visitors, catches simple bots -->
-          <div class="contact-honeypot" aria-hidden="true">
-            <label for="cfCompany">Company</label>
-            <input id="cfCompany" name="company" type="text" tabindex="-1" autocomplete="off">
-          </div>
-          <button type="submit" class="contact-submit">Send message</button>
-          <div id="contactStatus" class="contact-status"></div>
-        </form>
+    
+    <!-- Executive Leadership -->
+    <div class="section-head reveal" style="margin-bottom: 30px;">
+      <span class="eyebrow"><span class="dot"></span>Executive Leadership</span>
+      <h2>Driving operations and research</h2>
+    </div>
+    
+    <div class="dossiers reveal" style="margin-bottom: 60px;">
+      <div class="dossier">
+        <div class="dossier-photo">
+          <img src="Images\Dr.Frank_image.jpeg" alt="Dr. Frank Kassongo">
+        </div>
+        <div class="dossier-body">
+          <div class="ref mono">EXECUTIVE DIRECTOR</div>
+          <h3>Dr. Frank Kassongo</h3>
+          <p><strong>Doctorate of Philosophy (PhD) in Development Studies:</strong> University of the Western Cape (UWC).</p>
+          <p><strong>Master of Technology in Public Relations Management:</strong> Cape Peninsula University of Technology.</p>
+          <p>Apart from serving as Executive Director at FnB, Dr. Kassongo supervises MBA Capstone Project candidates at the University of Johannesburg Business School, South Africa.</p>
+          <p><strong>Experience:</strong> Entrepreneurship, Academic Research, Monitoring & Evaluation, Public Policy, and Stakeholder Relations.</p>
+          <div class="status" style="margin-top: auto; padding-top: 16px;"><a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">LinkedIn Profile &rarr;</a></div>
+        </div>
       </div>
 
-      <div class="contact-side reveal">
-        <h3>Direct contact</h3>
-        <p>Prefer to talk first? Reach the founder directly.</p>
-        <div class="contact-detail">
-          <div class="label">Phone</div>
-          <div class="value" data-global="phone">+255 742 460 508</div>
+      <div class="dossier">
+        <div class="dossier-photo">
+          <img src="Images\Mr.Elias_image.jpeg" alt="Mr. Elias F. Mkata">
         </div>
-        <div class="contact-detail">
-          <div class="label">Location</div>
-          <div class="value" data-global="location">Dar es Salaam, Tanzania</div>
+        <div class="dossier-body">
+          <div class="ref mono">LEGAL & COMPLIANCE</div>
+          <h3>Mr. Elias F. Mkata</h3>
+          <p><strong>Bachelor of Laws (LL.B):</strong> St. Augustine University of Tanzania – Mwanza.</p>
+          <p><strong>Master in Commercial Law:</strong> University of Cape Town – South Africa.</p>
+          <p><strong>Research focus:</strong> Regional Integration Laws and Regulations.</p>
+          <p><strong>Experience:</strong> Specialized in Tanzanian commercial law, regional integration, and cross-border transactions. Over 10 years working with SME owners, conducting due diligence, asset verification, and legal title checks.</p>
+          <div class="status" style="margin-top: auto; padding-top: 16px;"><a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">LinkedIn Profile &rarr;</a></div>
         </div>
-        <div class="contact-detail">
-          <div class="label">Coverage</div>
-          <div class="value">Tanzania · DRC · Burundi · Uganda · Kenya</div>
-        </div>
+      </div>
 
-        <p class="contact-publisher-note">
-          Publisher? <a class="contact-publisher-link" href="admin/login.html">Sign in to the publisher dashboard →</a>
-        </p>
+      <div class="dossier">
+        <div class="dossier-photo">
+          <img src="Images\Ms.Safi.jpeg" alt="Ms. Safi F. Kasongo">
+        </div>
+        <div class="dossier-body">
+          <div class="ref mono">TECHNOLOGY & DATA</div>
+          <h3>Ms. Safi F. Kasongo</h3>
+          <p><strong>Specialization:</strong> Database architecture, digital data collection workflows, and analytical platform engineering.</p>
+          <p>Oversees technical systems architecture, data pipeline integrity, and secure digital client reporting infrastructure.</p>
+          <div class="status" style="margin-top: auto; padding-top: 16px;"><a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">LinkedIn Profile &rarr;</a></div>
+        </div>
       </div>
     </div>
+
+    <!-- Board of Governance / Ambassadors -->
+    <div class="section-head reveal" style="margin-bottom: 30px;">
+      <span class="eyebrow"><span class="dot"></span>Governance & Oversight</span>
+      <h2>Ambassadors</h2>
+    </div>
+    
+    <div class="dossiers reveal" style="margin-bottom: 40px;">
+      <div class="dossier" style="max-width: 450px;">
+        <div class="dossier-photo">
+          <img src="Images\Dr.Darius_image.jpeg" alt="Mr. Bakari Darius Mahombo">
+        </div>
+        <div class="dossier-body">
+          <div class="ref mono">AMBASSADOR AUSTRALIA</div>
+          <h3>Mr. Bakari Darius Mahombo</h3>
+          <p>Mr. Mahombo is a diaspora investor and official FnB brand ambassador.</p>
+          <p><strong>Location:</strong> Victoria – Melbourne, Australia.</p>
+          <div class="status" style="margin-top: auto; padding-top: 16px;"><a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">LinkedIn Profile &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Where We Operate Call-to-Action Section -->
+<section id="where-we-operate-cta" class="reveal" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; margin-top: 40px; color: #ffffff;">
+  <div class="wrap" style="text-align: center; padding: 110px 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.4);">Explore Where We Operate</h2>
+    <p style="margin: 0 auto 36px; color: #f1f5f9; font-size: 1.15rem; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.4);">Discover our active regional networks, local coordination hubs, and field verification teams operating across East Africa and beyond.</p>
+    <a href="where-we-operate.html" style="display: inline-block; padding: 14px 32px; background-color: #ffffff; color: #0f172a; border-radius: 9999px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.2s ease;">View Our Locations</a>
   </div>
 </section>
 
@@ -185,7 +246,7 @@
           <li data-global="phone">+255 742 460 508</li>
           <li data-global="location">Dar es Salaam, Tanzania</li>
         </ul>
-        <div class="foot-social">
+         <div class="foot-social">
           <a href="#" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 8.5V18M6.5 5.5V5.51M11 18V11.5C11 10.1 12.1 9 13.5 9C14.9 9 16 10.1 16 11.5V18M11 11.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="#" data-social="twitter" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5L19 19M5 19L19 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
           <a href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9H16.5V6H14C12.3 6 11 7.3 11 9V11H9V14H11V19H14V14H16L16.5 11H14V9.5C14 9.2 14.2 9 14 9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
@@ -199,6 +260,7 @@
 
 <script src="site-config.js"></script>
 <script src="content-defaults.js"></script>
+<script src="sample-posts.js"></script>
 <script src="script.js"></script>
 <script src="content-render.js"></script>
 </body>

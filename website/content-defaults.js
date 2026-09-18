@@ -16,16 +16,15 @@ window.FNB_DEFAULT_CONTENT = {
     "contact": {
       "phone": "+255 742 460 508",
       "location": "Dar es Salaam, Tanzania"
-    }
-  },
-  "home": {
+    },
     "hero": {
       "eyebrow": "Tanzania · Diaspora Investment Advisory",
-      "title": "FnB institutionalises trust for diaspora investment.",
-      "body": "Forward in Business closes the trust gap between the East African diaspora and their home-based contacts - through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.",
+      "title": "Invest with Confidence. Stay Connected. See What Is Happening on the Ground.",
+      "subtitle": "Invest with Confidence. Stay Connected. See What Is Happening on the Ground.",
+      "body": "Forward in Business closes the trust gap between the East African diaspora and their home based contacts through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.",
       "primaryCta": {
-        "label": "Get the Diaspora Investment Report",
-        "href": "research.html#report"
+        "label": "Read More",
+        "href": "about.html#report"
       },
       "secondaryCta": {
         "label": "See how it works",
@@ -71,7 +70,7 @@ window.FNB_DEFAULT_CONTENT = {
     "trustIntro": {
       "eyebrow": "A service-led trust system",
       "title": "Not a replacement for family. A professional layer around it.",
-      "body": "FnB combines independent research, hands-on concierge execution, and a secure digital portal - so you gain a professionally accountable partner on the ground, without giving up the relationships you already trust.",
+      "body": "FnB combines independent research, hands-on concierge execution, and a secure digital portal, so you gain a professionally accountable partner on the ground, without giving up the relationships you already trust.",
       "linkLabel": "See the full client journey →",
       "linkHref": "roadmap.html"
     },
@@ -87,7 +86,7 @@ window.FNB_DEFAULT_CONTENT = {
         "num": "II",
         "label": "Concierge",
         "title": "Due Diligence & Project Assurance",
-        "body": "We never pool client money - we coordinate verification and execute the project on your behalf: title checks, procurement oversight, construction supervision.",
+        "body": "We never pool client money, we coordinate verification and execute the project on your behalf: title checks, procurement oversight, construction supervision.",
         "photo": "https://images.unsplash.com/photo-1681505531034-8d67054e07f6?q=80&w=800&auto=format&fit=crop"
       }
     ],
@@ -119,12 +118,12 @@ window.FNB_DEFAULT_CONTENT = {
     },
     "final": {
       "eyebrow": "Why FnB exists",
-      "title": "A family in London, finally completing a house in Tanzania - without losing money.",
-      "body": "That’s the outcome FnB is built around. Everything else - the research, the reports, the portal - exists to make that ordinary.",
+      "title": "A family in London, finally completing a quality house in Tanzania without losing money.",
+      "body": "That’s the outcome FnB is built around. Everything else, the research, the reports, the portal exists to make that ordinary.",
       "photo": "https://images.unsplash.com/photo-1761401395640-5c45422f2a99?q=80&w=2000&auto=format&fit=crop",
       "cta": {
-        "label": "Join the first cohort",
-        "href": "research.html#report"
+        "label": "Join us",
+        "href": "contact.html#report"
       }
     }
   },
@@ -164,7 +163,7 @@ window.FNB_DEFAULT_CONTENT = {
         "num": 4,
         "label": "Decide",
         "title": "Findings, without concealing risk",
-        "body": "We present findings, limitations, and options in full - including adverse facts. The investment and supplier decision stays yours.",
+        "body": "We present findings, limitations, and options in full including adverse facts. The investment and supplier decision stays yours.",
         "tag": "You decide: investment & supplier",
         "photo": "https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?q=80&w=800&auto=format&fit=crop"
       },
@@ -200,12 +199,12 @@ window.FNB_DEFAULT_CONTENT = {
     "hero": {
       "eyebrow": "Eight service pillars",
       "title": "What FnB does while you’re abroad.",
-      "body": "Fee-for-service, project by project - you keep ownership and every decision right, we handle verification and coordination on the ground. FnB does not pool, hold, or invest client funds in Phase 1.",
+      "body": "Fee-for-service, project by project, you keep ownership and every decision right, we handle verification and coordination on the ground. FnB does not pool, hold, or invest client funds in Phase 1.",
       "photo": "https://images.unsplash.com/photo-1718010564464-5888d08ef5e6?q=80&w=2200&auto=format&fit=crop"
     },
     "processIntro": {
       "eyebrow": "Example: building a house from abroad",
-      "title": "A diaspora family, building at home - four pillars in practice"
+      "title": "A diaspora family, building at home. Four pillars in practice"
     },
     "process": [
       {
@@ -335,35 +334,25 @@ window.FNB_DEFAULT_CONTENT = {
       "name": "Dr. Frank Kassongo",
       "role": "Founder & Managing Director",
       "credentials": [
-        {
-          "label": "Background",
-          "value": "PhD, Development Studies · MTech, Public Relations Management"
-        },
-        {
-          "label": "University",
-          "value": "University of the Western Cape · Cape Peninsula University of Technology"
-        },
-        {
-          "label": "Current role",
-          "value": "Postgraduate supervisor · MBA Capstone Project (Johannesburg)"
-        },
-        {
-          "label": "Contact",
-          "value": "+255 742 460 508"
-        }
+        { "label": "Experience", "value": "15+ Years in Data & Operations" },
+        { "label": "Focus", "value": "Field Verification & Systems" }
       ]
+    },
+    "quote": {
+      "text": "To become the most trusted, technology-enabled diaspora investment ecosystem connecting global African investors with sustainable opportunities across East Africa - and to get there through transparent governance, not just growth.",
+      "name": "Dr. Frank Kassongo",
+      "role": "Founder & Managing Director",
+      "initials": "FK"
     },
     "visionMission": {
       "eyebrow": "Vision & mission",
       "title": "What we’re building toward",
       "items": [
         {
-          "tag": "V",
           "title": "Vision",
           "body": "To become the most trusted, technology-enabled diaspora investment ecosystem connecting global African investors with sustainable opportunities across East Africa."
         },
         {
-          "tag": "M",
           "title": "Mission",
           "body": "To empower diaspora investors through transparent governance, professional investment management, digital innovation, investor education, and measurable impact."
         }
@@ -374,111 +363,31 @@ window.FNB_DEFAULT_CONTENT = {
       "title": "Six values that don’t move"
     },
     "principles": [
-      {
-        "title": "Transparency",
-        "body": "Every client can see what is being done with their money and why."
-      },
-      {
-        "title": "Evidence-based management",
-        "body": "Decisions are grounded in verified data and documented due diligence, not assumption."
-      },
-      {
-        "title": "Regulatory compliance",
-        "body": "FnB operates strictly within Tanzanian company, tax, and investment-advisory law."
-      },
-      {
-        "title": "Innovation",
-        "body": "Technology closes distance and information gaps - it isn’t used as a marketing gloss."
-      },
-      {
-        "title": "Long-term sustainability",
-        "body": "Client relationships and firm reputation are managed for the long run, not a single transaction."
-      },
-      {
-        "title": "Measurable impact",
-        "body": "Success is tracked against verified assets, completed projects, and informed decisions - not just revenue."
-      }
+      { "title": "Transparency", "body": "Every client can see what is being done with their money and why." },
+      { "title": "Evidence-based management", "body": "Decisions are grounded in verified data and documented due diligence, not assumption." },
+      { "title": "Regulatory compliance", "body": "FnB operates strictly within Tanzanian company, tax, and investment-advisory law." },
+      { "title": "Innovation", "body": "Technology closes distance and information gaps - it isn’t used as a marketing gloss." },
+      { "title": "Long-term sustainability", "body": "Client relationships and firm reputation are managed for the long run, not a single transaction." },
+      { "title": "Measurable impact", "body": "Success is tracked against verified assets, completed projects, and informed decisions - not just revenue." }
     ],
-    "teamIntro": {
-      "eyebrow": "Founding team",
-      "title": "A complementary skill set, not a solo founder story",
-      "body": "Development-sector research credibility, data and systems engineering, and IT delivery experience - built by people who’ve lived the problem from more than one angle."
-    },
-    "team": [
-      {
-        "initials": "FK",
-        "name": "Dr Frank Kassongo",
-        "role": "Founder / Managing Director",
-        "bg": "PhD, Development Studies; MTech, Public Relations Management",
-        "uni": "University of the Western Cape · Cape Peninsula University of Technology"
-      },
-      {
-        "initials": "SK",
-        "name": "Safi Kasongo",
-        "role": "Co-founder / Director, Systems Engineering",
-        "bg": "BSc, Data Science",
-        "uni": "The Eastern Africa Statistical Training Centre, Tanzania"
-      },
-      {
-        "initials": "EL",
-        "name": "Emmanuel Leonard",
-        "role": "Co-founder / IT Director",
-        "bg": "Diploma in IT; six years’ IT experience",
-        "uni": "University of Dar es Salaam Computing Centre, Tanzania"
-      },
-      {
-        "initials": "OK",
-        "name": "Oredi Kamili",
-        "role": "Co-founder / Client Relations",
-        "bg": "Client relationship management",
-        "uni": "-"
-      }
-    ],
-    "quote": {
-      "text": "To become the most trusted, technology-enabled diaspora investment ecosystem connecting global African investors with sustainable opportunities across East Africa - and to get there through transparent governance, not just growth.",
-      "name": "Dr. Frank Kassongo",
-      "role": "Founder & Managing Director",
-      "initials": "FK"
-    },
     "governanceIntro": {
       "eyebrow": "Governance philosophy",
       "title": "Seven pillars that answer the trust deficit directly",
-      "body": "FnB is registered as a private limited liability company in Tanzania, through BRELA, and operates strictly as a fee-based advisory and project-management service - it does not pool, hold, or invest client funds on a discretionary basis at this stage."
+      "body": "FnB is registered as a private limited liability company in Tanzania, through BRELA, and operates strictly as a fee-based advisory and project-management service."
     },
     "governance": [
-      {
-        "title": "Evidence-based decision-making",
-        "body": "Every recommendation is grounded in verified data, not assumption."
-      },
-      {
-        "title": "Technology-driven operations",
-        "body": "The secure evidence portal isn’t a feature - it’s how oversight actually happens."
-      },
-      {
-        "title": "Trust & transparency by design",
-        "body": "Built into the process from the first engagement, not bolted on after."
-      },
-      {
-        "title": "Accountability at every level",
-        "body": "From field verification staff to the Board."
-      },
-      {
-        "title": "Strict legal compliance",
-        "body": "BRELA filings, Tanzania Revenue Authority obligations, and AML/KYC from inception."
-      },
-      {
-        "title": "Respect for cultural diversity",
-        "body": "Across a geographically dispersed, multi-country client base."
-      },
-      {
-        "title": "Open, two-way communication",
-        "body": "With clients and partners, at every stage of the relationship."
-      }
+      { "title": "Evidence-based decision-making", "body": "Every recommendation is grounded in verified data, not assumption." },
+      { "title": "Technology-driven operations", "body": "The secure evidence portal isn’t a feature - it’s how oversight actually happens." },
+      { "title": "Trust & transparency by design", "body": "Built into the process from the first engagement, not bolted on after." },
+      { "title": "Accountability at every level", "body": "From field verification staff to the Board." },
+      { "title": "Strict legal compliance", "body": "BRELA filings, Tanzania Revenue Authority obligations, and AML/KYC from inception." },
+      { "title": "Respect for cultural diversity", "body": "Across a geographically dispersed, multi-country client base." },
+      { "title": "Open, two-way communication", "body": "With clients and partners, at every stage of the relationship." }
     ],
     "final": {
       "eyebrow": "Get in touch",
       "title": "Have land, a build, or a question about investing back home?",
-      "body": "Start with a conversation - no commitment, no custody of your funds, just a first look at what you’re trying to do.",
+      "body": "Start with a conversation, no commitment, no custody of your funds, just a first look at what you’re trying to do.",
       "photo": "https://images.unsplash.com/photo-1568216681201-1edacc6c8048?q=80&w=2000&auto=format&fit=crop",
       "cta": {
         "label": "Call +255 742 460 508",

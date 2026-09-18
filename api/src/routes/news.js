@@ -20,13 +20,6 @@ router.get('/:id', (req, res) => {
   res.json(row);
 });
 
-// GET /news/:id — public. Single post, for the blog detail page.
-router.get('/:id', (req, res) => {
-  const row = db.prepare('SELECT * FROM news WHERE id = ?').get(req.params.id);
-  if (!row) return res.status(404).json({ error: 'Not found' });
-  res.json(row);
-});
-
 // POST /news — publisher only.
 router.post('/', requirePublisher, (req, res) => {
   const { ok, errors, clean } = validateNews(req.body);

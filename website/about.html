@@ -15,27 +15,54 @@
 <header>
   <nav class="wrap">
     <a class="brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
-        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
-        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M13 22V17H19V22" stroke="#DD7A1F" stroke-width="1.6"/>
+      <svg class="brand-mark" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 40px; width: auto;">
+        <g transform="translate(2, 2)">
+          <path d="M 28 2 A 28 28 0 0 0 2 30 C 2 45 15 54 28 56" stroke="#0B2545" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 12 12 A 20 20 0 0 0 8 30 C 8 38 15 46 25 49" stroke="#E69138" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+          <rect x="11" y="24" width="5.5" height="18" rx="1" fill="#0B2545"/>
+          <rect x="19" y="16" width="5.5" height="26" rx="1" fill="#E69138"/>
+          <rect x="27" y="9" width="5.5" height="33" rx="1" fill="#0B2545"/>
+        </g>
+        <text x="64" y="44" font-family="'Bricolage Grotesque', 'Inter', sans-serif" font-weight="800" font-size="42" fill="#0B2545" letter-spacing="-1.5">FnB</text>
+        <text x="66" y="56" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#0B2545" letter-spacing="3.1">FORWARD IN BUSINESS</text>
       </svg>
-      <div>
-        <div class="brand-text">FnB</div>
-        <div class="brand-sub">Diaspora Investment Advisory</div>
-      </div>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks">
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="roadmap.html">How it works</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="news.html">News</a></li>
+        
+        <!-- Services Dropdown Menu -->
+        <li class="dropdown">
+          <a href="s.html" class="drop-btn">Services ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="s.html#service-1">Digital Client Portal</a></li>
+            <li><a href="s.html#service-2">Investment Research</a></li>
+            <li><a href="s.html#service-3">Due Diligence</a></li>
+            <li><a href="s.html#service-4">Legal & Title Verification</a></li>
+            <li><a href="s.html#service-5">Project Management</a></li>
+            <li><a href="s.html#service-6">Procurement Oversight</a></li>
+            <li><a href="s.html#service-8">Training & Partnerships</a></li>
+          </ul>
+        </li>
+
+        <!-- About Dropdown Menu -->
+        <li class="dropdown">
+          <a href="#" class="drop-btn active">About ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="about.html">Our Origin</a></li>
+            <li><a href="who-are-we.html">Who We Are</a></li>
+            <li><a href="team.html">Our Team & Governance</a></li>
+            <li><a href="markets.html">Markets</a></li>
+            <li><a href="where-we-operate.html">Where we operate</a></li>
+          </ul>
+        </li>
+
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a class="nav-cta" href="research.html#report">Get the report</a>
+      <a class="nav-cta" href="contact.html">Get in touch</a>
     </div>
   </nav>
 </header>
@@ -47,22 +74,33 @@
 <footer>
   <div class="wrap foot-grid">
     <a class="brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" width="22" height="22">
-        <rect x="1" y="1" width="30" height="30" rx="6" fill="#0E2A47"/>
-        <path d="M9 22V13L16 9L23 13V22" stroke="#F7F9FC" stroke-width="1.6" stroke-linejoin="round"/>
+      <svg class="brand-mark" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 22px; width: auto;">
+        <g transform="translate(2, 2)">
+          <path d="M 28 2 A 28 28 0 0 0 2 30 C 2 45 15 54 28 56" stroke="#0B2545" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 12 12 A 20 20 0 0 0 8 30 C 8 38 15 46 25 49" stroke="#E69138" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+          <rect x="11" y="24" width="5.5" height="18" rx="1" fill="#0B2545"/>
+          <rect x="19" y="16" width="5.5" height="26" rx="1" fill="#E69138"/>
+          <rect x="27" y="9" width="5.5" height="33" rx="1" fill="#0B2545"/>
+        </g>
+        <text x="64" y="44" font-family="'Bricolage Grotesque', 'Inter', sans-serif" font-weight="800" font-size="42" fill="#0B2545" letter-spacing="-1.5">FnB</text>
+        <text x="66" y="56" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#0B2545" letter-spacing="3.1">FORWARD IN BUSINESS</text>
       </svg>
-      <span>FnB - Forward in Business</span>
     </a>
     <div class="cols">
       <div>
         <h4>Institute</h4>
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="roadmap.html">How it works</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
+          <li><a href="s.html">Services</a></li>
+          <li><a href="markets.html">Markets</a></li>
           <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://m-innovation.co.tz" target="_blank" rel="noopener noreferrer">M-Innovation</a></li>
         </ul>
       </div>
       <div>
@@ -71,6 +109,13 @@
           <li data-global="phone">+255 742 460 508</li>
           <li data-global="location">Dar es Salaam, Tanzania</li>
         </ul>
+        <div class="foot-social">
+          <a href="#" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 8.5V18M6.5 5.5V5.51M11 18V11.5C11 10.1 12.1 9 13.5 9C14.9 9 16 10.1 16 11.5V18M11 11.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" data-social="twitter" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5L19 19M5 19L19 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <a href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9H16.5V6H14C12.3 6 11 7.3 11 9V11H9V14H11V19H14V14H16L16.5 11H14V9.5C14 9.2 14.2 9 14 9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+          <a href="https://www.instagram.com/fnbadvisory_tz?stkn=MWtyemtmNmI5dnVyaQ==" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="5" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="0.9" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/255742460508" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </div>
   </div>

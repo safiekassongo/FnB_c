@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where We Operate - FnB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .location-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  .location-block.reverse {
+    direction: rtl;
+  }
+  .location-block.reverse > * {
+    direction: ltr;
+  }
+  .location-img img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(14, 42, 71, 0.08);
+  }
+  .location-content h3 {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 1.15rem;
+  }
+  .location-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+  @media (max-width: 900px) {
+    .location-block, .location-block.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 30px;
+    }
+    .location-img img {
+      height: 250px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="brand-bar"></div>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 40px; width: auto;">
+        <g transform="translate(2, 2)">
+          <path d="M 28 2 A 28 28 0 0 0 2 30 C 2 45 15 54 28 56" stroke="#0B2545" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 12 12 A 20 20 0 0 0 8 30 C 8 38 15 46 25 49" stroke="#E69138" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+          <rect x="11" y="24" width="5.5" height="18" rx="1" fill="#0B2545"/>
+          <rect x="19" y="16" width="5.5" height="26" rx="1" fill="#E69138"/>
+          <rect x="27" y="9" width="5.5" height="33" rx="1" fill="#0B2545"/>
+        </g>
+        <text x="64" y="44" font-family="'Bricolage Grotesque', 'Inter', sans-serif" font-weight="800" font-size="42" fill="#0B2545" letter-spacing="-1.5">FnB</text>
+        <text x="66" y="56" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#0B2545" letter-spacing="3.1">FORWARD IN BUSINESS</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadmap.html">How it works</a></li>
+        
+        <!-- Services Dropdown Menu -->
+        <li class="dropdown">
+          <a href="s.html" class="drop-btn">Services ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="s.html#service-1">Digital Client Portal</a></li>
+            <li><a href="s.html#service-2">Investment Research</a></li>
+            <li><a href="s.html#service-3">Due Diligence</a></li>
+            <li><a href="s.html#service-4">Legal & Title Verification</a></li>
+            <li><a href="s.html#service-5">Project Management</a></li>
+            <li><a href="s.html#service-6">Procurement Oversight</a></li>
+            <li><a href="s.html#service-8">Training & Partnerships</a></li>
+          </ul>
+        </li> 
+   
+        <!-- About Dropdown Menu -->
+        <li class="dropdown">
+          <a href="#" class="drop-btn active">About ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="about.html">Our Origin</a></li>
+            <li><a href="who-are-we.html">Who We Are</a></li>
+            <li><a href="team.html">Our Team & Governance</a></li>
+            <li><a href="where-we-operate.html">Where We Operate</a></li>
+            <li><a href="markets.html">Markets</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="contact.html">Get in touch</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Regional Investment-Support Network</span>
+    <h1>Where We Operate</h1>
+    <p>FnB is building a regional investment-support network across selected growth centres in Tanzania, Burundi and Eastern DRC. Our location strategy combines established commercial centres, administrative capitals, tourism corridors, agricultural zones and lake-based economies.</p>
+  </div>
+</section>
+
+<section class="research" style="padding-top: 10px;">
+  <div class="wrap">
+
+    <div class="section-head reveal" style="margin-bottom: 40px;">
+      <span class="eyebrow mono">MACRO CONTEXT</span>
+      <h2>Diversity of Regional Investment Activity</h2>
+      <p>Tanzania Investment Centre (TIC) data show strong regional investment activity, with 901 registered investment projects in 2024 representing about US$9.31 billion in capital. Dar es Salaam accounted for 356 projects and about US$4.44 billion, Arusha 64 projects and about US$213.06 million, Dodoma 47 projects and about US$182.36 million, Mwanza 37 projects and about US$581.11 million, and Kigoma 8 projects and about US$155.62 million.</p>
+    </div>
+
+    <!-- Dar es Salaam -->
+    <div id="dar-es-salaam" class="location-block reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1578593139851-f7636e0539c3?q=80&w=1000&auto=format&fit=crop" alt="Dar es Salaam Skyline">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 01</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Dar es Salaam | Tanzania</h2>
+        <p><strong>Role in FnB network:</strong> Tanzania's principal commercial and investment hub, with strong relevance for property, construction, logistics, trade, services, tourism, manufacturing and coastal/blue-economy activities.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Residential and commercial property, apartments, mixed-use developments and office accommodation.</li>
+          <li>Retail, warehousing, logistics and commercial infrastructure.</li>
+          <li>Hospitality and tourism-related projects.</li>
+          <li>Coastal and blue-economy opportunities, fisheries, and marine services.</li>
+          <li>Special Economic Zones and export-oriented manufacturing.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Why it matters:</strong> Offers market depth, business connectivity, and priorities identified by TIC around modern markets, shipping, and tourism.</p>
+      </div>
+    </div>
+
+    <!-- Arusha -->
+    <div id="arusha" class="location-block reverse reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1000&auto=format&fit=crop" alt="Arusha Landscape">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 02</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Arusha | Tanzania</h2>
+        <p><strong>Role in FnB network:</strong> Northern Tanzania's tourism, horticulture, services and commercial gateway.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Tourism accommodation, hospitality and complementary services.</li>
+          <li>Residential apartments, offices and commercial developments.</li>
+          <li>Horticulture, high-value agriculture and agro-processing.</li>
+          <li>Tourism-linked retail, recreation and specialized service businesses.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Why it matters:</strong> Highlighted by TIC for tourism, industrial production, and horticulture. Kimandolu opportunity areas show high demand for commercial and residential spaces.</p>
+      </div>
+    </div>
+
+    <!-- Dodoma -->
+    <div id="dodoma" class="location-block reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f62c2?q=80&w=1000&auto=format&fit=crop" alt="Dodoma Development">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 03</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Dodoma | Tanzania</h2>
+        <p><strong>Role in FnB network:</strong> National capital and a growing administrative, institutional, commercial and real-estate market.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Residential apartments, housing estates and serviced accommodation.</li>
+          <li>Hotels, conference facilities and commercial complexes.</li>
+          <li>Education, research, health and professional services.</li>
+          <li>Food processing, light manufacturing, and logistics corridors.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Why it matters:</strong> Investment opportunities cluster around Nala, Msalato Airport, Ihumwa Dry Port, and Government City developments.</p>
+      </div>
+    </div>
+
+    <!-- Mwanza -->
+    <div id="mwanza" class="location-block reverse reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop" alt="Lake Victoria Mwanza">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 04</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Mwanza | Tanzania</h2>
+        <p><strong>Role in FnB network:</strong> Lake Victoria commercial centre with strong links to fisheries, trade, transport, agriculture and urban development.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Fish processing, cold-chain, storage and fisheries value addition.</li>
+          <li>Aquaculture, fish-farming inputs, feeds, and hatcheries.</li>
+          <li>Residential and commercial property serving a growing urban economy.</li>
+          <li>Agro-processing, regional trade, and lake tourism.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Why it matters:</strong> High registered project capital combined with prime potential in cold rooms, cage culture, and regional logistics.</p>
+      </div>
+    </div>
+
+    <!-- Kigoma -->
+    <div id="kigoma" class="location-block reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Lake Tanganyika Kigoma">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 05</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Kigoma | Tanzania</h2>
+        <p><strong>Role in FnB network:</strong> Strategic Lake Tanganyika and western Tanzania corridor with agriculture, fisheries, cross-border trade and tourism potential.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Oil palm, soybean and mixed-crop agriculture and agro-processing.</li>
+          <li>Fisheries, aquaculture, cold-chain and fish value addition.</li>
+          <li>Lake Tanganyika tourism, recreation and urban support property.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Why it matters:</strong> Features major agricultural land allocations like the 14,000-hectare Uvinza soybean project, plus rich blue-economy dimensions.</p>
+      </div>
+    </div>
+
+    <!-- Bujumbura -->
+    <div id="bujumbura" class="location-block reverse reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop" alt="Bujumbura Waterfront">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">HUB 06</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Bujumbura | Burundi</h2>
+        <p><strong>Role in FnB network:</strong> Burundi's principal commercial city and an important Lake Tanganyika gateway.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Residential and commercial real estate, hotels and business hospitality.</li>
+          <li>Lake Tanganyika tourism, recreation, and waterfront development.</li>
+          <li>Horticulture, food processing, cold-chain, logistics and manufacturing.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Investor note:</strong> Foreign investment compliance requires minimum thresholds (US$500,000 in Bujumbura; US$250,000 elsewhere). FnB verifies legal positions prior to client presentation.</p>
+      </div>
+    </div>
+
+    <!-- Eastern DRC -->
+    <div id="eastern-drc" class="location-block reveal">
+      <div class="location-img">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop" alt="Eastern DRC Corridor">
+      </div>
+      <div class="location-content">
+        <span class="eyebrow mono">FRONTIER MARKET</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Eastern DRC | Selected Growth Corridors</h2>
+        <p><strong>Role in FnB network:</strong> A high-potential frontier market where rigorous due diligence addresses complex project, legal, security and execution realities.</p>
+        <h3>Key Focus Sectors:</h3>
+        <ul>
+          <li>Agriculture and agribusiness value chains.</li>
+          <li>Real estate, construction, energy and environmental projects.</li>
+          <li>Health, education, technology and logistics services.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>FnB principle:</strong> We never treat Eastern DRC as a single homogeneous market; every corridor is assessed independently for execution risk.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 22px; width: auto;">
+        <g transform="translate(2, 2)">
+          <path d="M 28 2 A 28 28 0 0 0 2 30 C 2 45 15 54 28 56" stroke="#0B2545" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 12 12 A 20 20 0 0 0 8 30 C 8 38 15 46 25 49" stroke="#E69138" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+          <rect x="11" y="24" width="5.5" height="18" rx="1" fill="#0B2545"/>
+          <rect x="19" y="16" width="5.5" height="26" rx="1" fill="#E69138"/>
+          <rect x="27" y="9" width="5.5" height="33" rx="1" fill="#0B2545"/>
+        </g>
+        <text x="64" y="44" font-family="'Bricolage Grotesque', 'Inter', sans-serif" font-weight="800" font-size="42" fill="#0B2545" letter-spacing="-1.5">FnB</text>
+        <text x="66" y="56" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#0B2545" letter-spacing="3.1">FORWARD IN BUSINESS</text>
+      </svg>
+    </a>
+    <div class="cols">
+      <div>
+        <h4>Institute</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="roadmap.html">How it works</a></li>
+          <li><a href="s.html">Services</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://m-innovation.co.tz" target="_blank" rel="noopener noreferrer">M-Innovation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li data-global="phone">+255 742 460 508</li>
+          <li data-global="location">Dar es Salaam, Tanzania</li>
+        </ul>
+        <div class="foot-social">
+          <a href="#" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 8.5V18M6.5 5.5V5.51M11 18V11.5C11 10.1 12.1 9 13.5 9C14.9 9 16 10.1 16 11.5V18M11 11.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" data-social="twitter" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5L19 19M5 19L19 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <a href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9H16.5V6H14C12.3 6 11 7.3 11 9V11H9V14H11V19H14V14H16L16.5 11H14V9.5C14 9.2 14.2 9 14 9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+          <a href="https://www.instagram.com/fnbadvisory_tz?stkn=MWtyemtmNmI5dnVyaQ==" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="5" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="0.9" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/255742460508" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="site-config.js"></script>
+<script src="content-defaults.js"></script>
+<script src="sample-posts.js"></script>
+<script src="script.js"></script>
+<script src="content-render.js"></script>
+</body>
+</html>

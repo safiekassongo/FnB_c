@@ -39,7 +39,7 @@ window.FNB_CONFIG = {
   // Your API's base URL, no trailing slash. Leave empty ('') to run
   // in local preview mode - public pages fall back to bundled sample
   // content, and the admin app will show a clear "not connected" state.
-  BASE_URL: 'https://euphonious-valkyrie-886cfc.netlify.app/',
+  BASE_URL: 'http://localhost:4000',
 
   // How the publisher's token is sent on write requests.
   //   'bearer' -> sends 'Authorization: Bearer <token>'

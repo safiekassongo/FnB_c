@@ -3,12 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FnB - Forward in Business</title>
+<title>Markets - FnB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
+  .market-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  .market-block.reverse {
+    direction: rtl;
+  }
+  .market-block.reverse > * {
+    direction: ltr;
+  }
+  .market-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(14, 42, 71, 0.08);
+  }
+  .market-content h3 {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 1.15rem;
+  }
+  .market-content h2 {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+  }
+  .market-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+  .markets-page-section {
+    padding-top: 10px;
+  }
   /* Partner Section Styling */
   .partners-section {
     padding: 60px 0;
@@ -53,9 +91,15 @@
     width: auto;
     object-fit: contain;
   }
-  .partner-item svg {
-    max-height: 38px;
-    width: auto;
+  @media (max-width: 900px) {
+    .market-block, .market-block.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 30px;
+    }
+    .market-img img {
+      height: 250px;
+    }
   }
 </style>
 </head>
@@ -80,7 +124,7 @@
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="roadmap.html">How it works</a></li>
         <li class="dropdown">
           <a href="s.html" class="drop-btn">Services</a>
@@ -94,13 +138,15 @@
             <li><a href="s.html#service-8">Training & Partnerships</a></li>
           </ul>
         </li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a class="active" href="markets.html">Markets</a></li>
         <li class="dropdown">
-          About 
+          <a href="#" class="drop-btn">About ▾</a>
           <ul class="dropdown-content">
             <li><a href="about.html">Our Origin</a></li>
             <li><a href="who-are-we.html">Who We Are</a></li>
             <li><a href="team.html">Our Team & Governance</a></li>
-            <li><a href="Markets.html">Markets</a></li>
+            <li><a href="markets.html">Markets</a></li>
             <li><a href="where-we-operate.html">Where We Operate</a></li> 
           </ul>
         </li>
@@ -112,31 +158,94 @@
   </nav>
 </header>
 
-<div id="fnbHome">
-  <div class="wrap home-loading-wrap"><div class="news-loading">Loading page content…</div></div>
-</div>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Sector Focus &amp; Value Creation</span>
+    <h1>The Markets We Target</h1>
+    <p>FnB focuses on sectors where diaspora investors can combine commercial value with tangible local economic impact. Every project passes strict internal screening and verification before being presented as suitable for consideration.</p>
+  </div>
+</section>
 
-<!-- Partner Section Featuring Both M-Innovation Options -->
+<section class="research markets-page-section">
+  <div class="wrap">
+
+    <!-- Building & Construction -->
+    <div id="building-construction" class="market-block reveal">
+      <div class="market-img">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Building and Construction">
+      </div>
+      <div class="market-content">
+        <span class="eyebrow mono">SECTOR A</span>
+        <h2>Building &amp; Construction</h2>
+        <h3>Key Opportunity Profiles:</h3>
+        <ul>
+          <li>Residential housing, apartments, housing estates and student accommodation.</li>
+          <li>Commercial buildings, retail centres, and mixed-use real estate developments.</li>
+          <li>Schools, education infrastructure, and healthcare/senior-living facilities.</li>
+          <li>Hotels, serviced apartments, tourism accommodation, and co-working offices.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Market rationale:</strong> Official investment materials highlight a continuing need for housing, commercial structures, and offices, backed by strong urban demand growth across Dodoma and other regional hubs.</p>
+      </div>
+    </div>
+
+    <!-- Agriculture & Agribusiness -->
+    <div id="agriculture" class="market-block reverse reveal">
+      <div class="market-img">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000&auto=format&fit=crop" alt="Agriculture and Agribusiness">
+      </div>
+      <div class="market-content">
+        <span class="eyebrow mono">SECTOR B</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Agriculture &amp; Agribusiness</h2>
+        <h3>Key Opportunity Profiles:</h3>
+        <ul>
+          <li>Avocado and horticulture value chains.</li>
+          <li>Oil palm, sunflower, and edible-oil processing lines.</li>
+          <li>Soybean and mixed-crop farming operations.</li>
+          <li>Agro-processing, storage, packaging, irrigation, and agricultural distribution inputs.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Market rationale:</strong> Tanzania positions agriculture as a primary investment pillar, with TIC regularly issuing targeted sector guides and curated land/project opportunities.</p>
+      </div>
+    </div>
+
+    <!-- Blue Economy -->
+    <div id="blue-economy" class="market-block reveal">
+      <div class="market-img">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop" alt="Blue Economy and Fisheries">
+      </div>
+      <div class="market-content">
+        <span class="eyebrow mono">SECTOR C</span>
+        <h2 style="margin-bottom: 12px; font-size: 1.6rem;">Blue Economy</h2>
+        <h3>Key Opportunity Profiles:</h3>
+        <ul>
+          <li>Commercial fisheries, fish processing, cold-chain, ice plants, and storage facilities.</li>
+          <li>Aquaculture, cage/pond fish farming, feeds, and hatcheries.</li>
+          <li>Water transport, boat services, dry docking, and lake logistics infrastructure.</li>
+          <li>Lake and coastal eco-tourism, recreation, and aquatic ecosystem restoration services.</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-soft);"><strong>Market rationale:</strong> We establish the Blue Economy as a distinctive category encompassing aquatic value chains, fisheries infrastructure, and sustainable lake/coastal development.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Partner Section Featuring Direct Image Reference -->
 <section class="partners-section reveal">
   <div class="wrap">
     <span class="eyebrow mono"><span class="dot"></span>STRATEGIC COLLABORATION</span>
     <h3 style="font-size: 1.5rem; color: var(--ink); margin-bottom: 8px;">Our Official Partner</h3>
     <p style="color: var(--ink-soft); font-size: 0.95rem; max-width: 600px; margin: 0 auto;">Collaborating with M-Innovation to deliver comprehensive digital solutions and robust project execution.</p>
     <div class="partners-grid">
-      
-      <!-- Option 1: Direct Image from Website -->
       <a href="https://m-innovation.co.tz" target="_blank" rel="noopener noreferrer" class="partner-item" title="M-Innovation Live Asset">
         <img src="https://m-innovation.co.tz/wp-content/uploads/2023/10/cropped-M-Innovation-logo-retina.png" alt="M-Innovation Logo">
       </a>
-
-
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-grid">
-    <a class="brand footer-brand" href="index.html">
+    <a class="brand" href="index.html">
       <svg class="brand-mark" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 22px; width: auto;">
         <g transform="translate(2, 2)">
           <path d="M 28 2 A 28 28 0 0 0 2 30 C 2 45 15 54 28 56" stroke="#0B2545" stroke-width="3.5" stroke-linecap="round" fill="none"/>
@@ -155,7 +264,8 @@
         <ul>
           <li><a href="roadmap.html">How it works</a></li>
           <li><a href="s.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="markets.html">Markets</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -178,6 +288,7 @@
 
 <script src="site-config.js"></script>
 <script src="content-defaults.js"></script>
+<script src="sample-posts.js"></script>
 <script src="script.js"></script>
 <script src="content-render.js"></script>
 </body>

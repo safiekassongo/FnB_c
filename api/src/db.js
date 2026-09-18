@@ -1,5 +1,5 @@
 // db.js — SQLite database setup (file-based, no external DB service needed).
-const Database = require('better-sqlite3');
+const { DatabaseSync } = require('node:sqlite');
 const path = require('path');
 const fs = require('fs');
 
@@ -8,8 +8,8 @@ const DB_PATH = process.env.DATABASE_PATH || path.join(__dirname, '..', 'data', 
 // Ensure the data directory exists (important on first boot / fresh deploys).
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
 
-const db = new Database(DB_PATH);
-db.pragma('journal_mode = WAL');
+const db = new DatabaseSync(DB_PATH);
+db.exec('PRAGMA journal_mode = WAL;');
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS news (

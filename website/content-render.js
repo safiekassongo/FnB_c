@@ -22,7 +22,8 @@
         }
       } catch (e) { /* fall through to defaults */ }
     }
-    const fallback = (window.FNB_DEFAULT_CONTENT || {})[page];
+    const defaults = window.FNB_DEFAULT_CONTENT || {};
+    const fallback = defaults[page] || (page === 'home' ? defaults.global : undefined);
     return { data: fallback, source: 'default' };
   }
 
@@ -65,6 +66,7 @@
         <div class="wrap">
           <span class="eyebrow"><span class="dot"></span>${esc(d.hero.eyebrow)}</span>
           <h1>${esc(d.hero.title)}</h1>
+          ${d.hero.subtitle ? `<p class="hero-subtitle">${esc(d.hero.subtitle)}</p>` : ''}
           <p class="hero-sub">${esc(d.hero.body)}</p>
           ${d.hero.badges ? `<div class="hero-badges">${d.hero.badges.map(b => `
             <span class="hero-badge"><svg class="ico" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.2 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>${esc(b)}</span>
@@ -334,7 +336,7 @@
             <h2>${esc(d.visionMission.title)}</h2>
           </div>
           <div class="vision-list reveal">
-            ${d.visionMission.items.map(v => `<div class="vision-item"><div class="n mono">${esc(v.tag)}</div><div><h4>${esc(v.title)}</h4><p>${esc(v.body)}</p></div></div>`).join('')}
+            ${d.visionMission.items.map((v, i) => `<div class="vision-item"><div class="n mono">${String(i + 1).padStart(2, '0')}</div><div><h4>${esc(v.title)}</h4><p>${esc(v.body)}</p></div></div>`).join('')}
           </div>
 
           <div class="section-head reveal" style="margin-top:64px;">
@@ -343,27 +345,6 @@
           </div>
           <div class="vision-list reveal">
             ${d.principles.map((p, i) => `<div class="vision-item"><div class="n mono">${String(i + 1).padStart(2, '0')}</div><div><h4>${esc(p.title)}</h4><p>${esc(p.body)}</p></div></div>`).join('')}
-          </div>
-        </div>
-      </section>
-
-      <section class="team">
-        <div class="wrap">
-          <div class="section-head reveal">
-            <span class="eyebrow"><span class="dot"></span>${esc(d.teamIntro.eyebrow)}</span>
-            <h2>${esc(d.teamIntro.title)}</h2>
-            <p>${esc(d.teamIntro.body)}</p>
-          </div>
-          <div class="team-grid reveal">
-            ${d.team.map(t => `
-              <div class="team-card">
-                <div class="team-avatar">${esc(t.initials)}</div>
-                <h4>${esc(t.name)}</h4>
-                <div class="role">${esc(t.role)}</div>
-                <div class="bg">${esc(t.bg)}</div>
-                <div class="uni">${esc(t.uni)}</div>
-              </div>
-            `).join('')}
           </div>
         </div>
       </section>

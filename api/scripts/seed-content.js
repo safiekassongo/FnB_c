@@ -9,12 +9,12 @@
 
 const path = require('path');
 const fs = require('fs');
-const Database = require('better-sqlite3');
+const { DatabaseSync } = require('node:sqlite');
 
 const DB_PATH = process.env.DATABASE_PATH || path.join(__dirname, '..', 'data', 'fnb.db');
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-const db = new Database(DB_PATH);
-db.pragma('journal_mode = WAL');
+const db = new DatabaseSync(DB_PATH);
+db.exec('PRAGMA journal_mode = WAL;');
 db.exec(`
   CREATE TABLE IF NOT EXISTS content (
     page TEXT PRIMARY KEY,
@@ -67,6 +67,7 @@ const content = {
     hero: {
       eyebrow: 'Tanzania \u00b7 Diaspora Investment Advisory',
       title: 'FnB institutionalises trust for diaspora investment.',
+      subtitle: 'Independent verification and accountable project execution for East African diaspora investors.',
       body: 'Forward in Business closes the trust gap between the East African diaspora and their home-based contacts through independent verification, project assurance, and a secure evidence portal that gives you visibility into your money and your projects from anywhere in the world.',
       primaryCta: { label: 'Get the Diaspora Investment Report', href: 'research.html#report' },
       secondaryCta: { label: 'See how it works', href: 'roadmap.html' },
@@ -265,12 +266,15 @@ const upsert = db.prepare(`
   ON CONFLICT(page) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at
 `);
 
-const insertMany = db.transaction((pages) => {
-  for (const [page, data] of Object.entries(pages)) {
+db.exec('BEGIN TRANSACTION;');
+try {
+  for (const [page, data] of Object.entries(content)) {
     upsert.run({ page, data: JSON.stringify(data) });
   }
-});
-
-insertMany(content);
+  db.exec('COMMIT;');
+} catch (error) {
+  db.exec('ROLLBACK;');
+  throw error;
+}
 console.log('Seeded content for pages:', Object.keys(content).join(', '));
 db.close();
