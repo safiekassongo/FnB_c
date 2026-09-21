@@ -6,6 +6,8 @@ COPY package.json package-lock.json* ./
 RUN npm install --omit=dev
 
 COPY src ./src
+COPY scripts ./scripts
+RUN node scripts/seed-content.js
 
 # Mount a volume at /app/data in production so the SQLite file survives
 # redeploys, e.g.: docker run -v fnb_data:/app/data ...
